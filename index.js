@@ -11,9 +11,22 @@ $(document).ready(function(){
 		//console.log(this);
 		var person = this.innerHTML;
 		//console.log(person)
-		var bio = data[person]
-		$('#bio').empty();
-		$('#bio').append(bio);
+		var bio = data[person].bio
+		//console.log(bio)
+		var gender = data[person].gender
+		//console.log(gender)
+		if (gender == "f") {
+			//$('#females').empty();
+			$('#females').html(bio);
+		} else {
+			//$('#males').empty();
+			$('#males').html(bio);
+		}
+		//$('#bio').empty();
+		//$('#bio').append(bio);
+	//data[]['bio']
+		//var person = data[name];
+		
 	})
 
 
